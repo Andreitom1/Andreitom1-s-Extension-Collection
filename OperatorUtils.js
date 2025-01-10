@@ -281,7 +281,7 @@
     blocks.push({
         opcode: "block5",
         blockType: Scratch.BlockType.REPORTER,
-        text: "[input5]letter of[input6]",
+        text: "[input7]letter of[input8]",
         arguments: {
             "input5": {
                 type: Scratch.ArgumentType.STRING,
