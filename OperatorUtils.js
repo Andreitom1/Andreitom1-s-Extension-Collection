@@ -288,11 +288,11 @@
         blockType: Scratch.BlockType.REPORTER,
         text: "[input7]letter of[input8]",
         arguments: {
-            "input5": {
+            "input7": {
                 type: Scratch.ArgumentType.STRING,
                 menu: 'menu3'
             },
-            "input6": {
+            "input8": {
                 type: Scratch.ArgumentType.STRING,
                 defaultValue: 'apple',
             },
@@ -301,16 +301,16 @@
         isEdgeActivated: false
     });
     Extension.prototype["block5"] = async (args, util) => {
-        if (Boolean((args["input6"] == ''))) {
+        if (Boolean((args["input8"] == ''))) {
             return ''
 
         } else {
-            switch (args["input5"]) {
+            switch (args["input7"]) {
                 case ('first'):
-                    return (args["input6"].split("")[1 - 1])
+                    return (args["input8"].split("")[1 - 1])
 
                 case ('last'):
-                    return (args["input6"].split("")[(args["input6"].length) - 1])
+                    return (args["input8"].split("")[(args["input8"].length) - 1])
 
                 default:
                     console.error('Invalid option.');
