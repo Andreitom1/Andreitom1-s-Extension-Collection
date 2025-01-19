@@ -200,6 +200,11 @@
         items: [...[...[], 'first'], 'last']
     }
 
+    menus["menu4"] = {
+        acceptReporters: false,
+        items: [...[...[], 'divisible'], 'not divisible']
+    }
+
     blocks.push({
         opcode: "block3",
         blockType: Scratch.BlockType.REPORTER,
@@ -311,6 +316,38 @@
                     console.error('Invalid option.');
 
             };
+
+        };
+    };
+
+    blocks.push({
+        opcode: "block6",
+        blockType: Scratch.BlockType.BOOLEAN,
+        text: "is[input9][input10]by[input11]?",
+        arguments: {
+            "input9": {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 12,
+            },
+            "input10": {
+                type: Scratch.ArgumentType.STRING,
+                menu: 'menu4'
+            },
+            "input11": {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 3,
+            },
+        },
+        disableMonitor: true,
+        isEdgeActivated: false
+    });
+    Extension.prototype["block6"] = async (args, util) => {
+        switch (args["input10"]) {
+            case ('divisible'):
+                return ((args["input9"] % args["input11"]) == 0)
+
+            case ('not divisible'):
+                return !((args["input9"] % args["input11"]) == 0)
 
         };
     };
