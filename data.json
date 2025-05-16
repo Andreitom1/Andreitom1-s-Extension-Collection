@@ -1,4 +1,4 @@
 {
-  "extensions#":5,
-  "extensions":["SuperOperators","TomTomUtilities","JavaScriptEvaluate","OperatorUtils","JavaScriptConsole"]
+  "extensions#":6,
+  "extensions":["SuperOperators","TomTomUtilities","JavaScriptEvaluate","OperatorUtils","JavaScriptConsole","TechnicalUtilities"]
 }
